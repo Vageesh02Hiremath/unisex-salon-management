@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<p:sld xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main">
+  <p:cSld>
+    <p:bg><p:bgPr><a:solidFill><a:srgbClr val="F8FAFC" /></a:solidFill><a:effectLst /></p:bgPr></p:bg>
+    <p:spTree>
+      <p:nvGrpSpPr><p:cNvPr id="1" name="" /><p:cNvGrpSpPr /><p:nvPr /></p:nvGrpSpPr>
+      <p:grpSpPr><a:xfrm><a:off x="0" y="0" /><a:ext cx="0" cy="0" /><a:chOff x="0" y="0" /><a:chExt cx="0" cy="0" /></a:xfrm></p:grpSpPr>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="2" name="Header" /><p:cNvSpPr /><p:nvPr /></p:nvSpPr>
+        <p:spPr><a:xfrm><a:off x="0" y="0" /><a:ext cx="12192000" cy="742950" /></a:xfrm><a:prstGeom prst="rect"><a:avLst /></a:prstGeom><a:solidFill><a:srgbClr val="111827" /></a:solidFill><a:ln><a:noFill /></a:ln></p:spPr>
+        <p:txBody><a:bodyPr /><a:lstStyle /><a:p /></p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="3" name="Title" /><p:cNvSpPr txBox="1" /><p:nvPr /></p:nvSpPr>
+        <p:spPr><a:xfrm><a:off x="609600" y="171450" /><a:ext cx="7239000" cy="400050" /></a:xfrm><a:prstGeom prst="rect"><a:avLst /></a:prstGeom><a:noFill /><a:ln><a:noFill /></a:ln></p:spPr>
+        <p:txBody><a:bodyPr wrap="square" lIns="76200" tIns="38100" rIns="76200" bIns="38100" /><a:lstStyle /><a:p><a:pPr algn="l" /><a:r><a:rPr lang="en-US" sz="2500" b="1"><a:solidFill><a:srgbClr val="FFFFFF" /></a:solidFill><a:latin typeface="Aptos" /></a:rPr><a:t>ER Diagram / Database Model</a:t></a:r></a:p></p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="4" name="Slide Number" /><p:cNvSpPr txBox="1" /><p:nvPr /></p:nvSpPr>
+        <p:spPr><a:xfrm><a:off x="10572750" y="209550" /><a:ext cx="904875" cy="304800" /></a:xfrm><a:prstGeom prst="rect"><a:avLst /></a:prstGeom><a:noFill /><a:ln><a:noFill /></a:ln></p:spPr>
+        <p:txBody><a:bodyPr wrap="square" lIns="76200" tIns="38100" rIns="76200" bIns="38100" /><a:lstStyle /><a:p><a:pPr algn="r" /><a:r><a:rPr lang="en-US" sz="1600" b="1"><a:solidFill><a:srgbClr val="FBCFE8" /></a:solidFill><a:latin typeface="Aptos" /></a:rPr><a:t>Domestic Oil Business Distributor Management System</a:t></a:r></a:p></p:txBody>
+      </p:sp>
+      <p:sp>
+        <p:nvSpPr><p:cNvPr id="6" name="Image Frame" /><p:cNvSpPr /><p:nvPr /></p:nvSpPr>
+        <p:spPr><a:xfrm><a:off x="3314700" y="990600" /><a:ext cx="5295900" cy="5486400" /></a:xfrm><a:prstGeom prst="roundRect"><a:avLst><a:gd name="adj" fmla="val 2500" /></a:avLst></a:prstGeom><a:solidFill><a:srgbClr val="FFFFFF" /></a:solidFill><a:ln w="12700"><a:solidFill><a:srgbClr val="CBD5E1" /></a:solidFill></a:ln></p:spPr>
+        <p:txBody><a:bodyPr /><a:lstStyle /><a:p /></p:txBody>
+      </p:sp>
+      <p:pic>
+        <p:nvPicPr><p:cNvPr id="7" name="ER Diagram Screenshot" /><p:cNvPicPr /><p:nvPr /></p:nvPicPr>
+        <p:blipFill><a:blip r:embed="rId1" /><a:stretch><a:fillRect /></a:stretch></p:blipFill>
+        <p:spPr><a:xfrm><a:off x="3524250" y="1104900" /><a:ext cx="4876800" cy="5419725" /></a:xfrm><a:prstGeom prst="rect"><a:avLst /></a:prstGeom><a:ln><a:noFill /></a:ln></p:spPr>
+      </p:pic>
+    </p:spTree>
+  </p:cSld>
+  <p:clrMapOvr><a:masterClrMapping /></p:clrMapOvr>
+</p:sld>

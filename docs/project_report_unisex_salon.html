@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project Report - Unisex Salon Management System</title>
+  <style>
+    @page { size: A4; margin: 1in; }
+    body { font-family: "Times New Roman", serif; font-size: 12pt; line-height: 1.45; color: #111; }
+    h1, h2, h3, h4 { font-family: "Times New Roman", serif; margin: 0.8em 0 0.35em; }
+    h1 { text-align: center; font-size: 18pt; text-transform: uppercase; page-break-before: always; }
+    h2 { font-size: 15pt; text-transform: uppercase; }
+    h3 { font-size: 13pt; }
+    h4 { font-size: 12pt; }
+    p { margin: 0 0 0.65em; text-align: justify; }
+    ul, ol { margin-top: 0.2em; }
+    table { width: 100%; border-collapse: collapse; margin: 0.7em 0 1em; }
+    th, td { border: 1px solid #222; padding: 6px; vertical-align: top; }
+    th { text-align: center; font-weight: bold; }
+    pre { border: 1px solid #999; padding: 10px; font-family: Consolas, monospace; font-size: 9.5pt; white-space: pre-wrap; }
+    .cover { text-align: center; page-break-after: always; }
+    .cover p { text-align: center; margin: 0.35em 0; }
+    .big { font-size: 18pt; font-weight: bold; text-transform: uppercase; }
+    .project-title { font-size: 20pt; font-weight: bold; margin: 1em 0; text-transform: uppercase; }
+    .page-break { page-break-before: always; }
+    .center { text-align: center; }
+    .sign-row { display: flex; justify-content: space-between; gap: 1em; margin-top: 3em; }
+    .sign { width: 32%; text-align: center; }
+    .figure-box { border: 1px dashed #555; padding: 12px; margin: 1em 0; text-align: center; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<section class="cover">
+  <p class="big">Karnatak University</p>
+  <p class="big">Dharwad</p>
+  <p>Janata Shikshana Samiti's</p>
+  <p><strong>JSS Shri Manjunatheshwara Institute of UG &amp; PG Studies, Vidyagiri, Dharwad - 580004</strong></p>
+  <p style="margin-top:2em;">A PROJECT REPORT ON</p>
+  <p class="project-title">Unisex Salon Management System</p>
+  <p>Submitted in partial fulfillment of the requirements for</p>
+  <p><strong>Bachelor of Computer Applications (BCA)</strong></p>
+  <p>of Karnatak University, Dharwad</p>
+  <p style="margin-top:2em;"><strong>Project Guided By</strong></p>
+  <p>Prof. Umesh Ambiger</p>
+  <p style="margin-top:2em;"><strong>Submitted By</strong></p>
+  <p>Vageesh Hiremath</p>
+  <p>BCA VI Semester, C Division</p>
+  <p>UUCMS No: U02BF23S0206</p>
+  <p style="margin-top:2em;"><strong>Department of Computer Science</strong></p>
+  <p><strong>Academic Year 2025-2026</strong></p>
+</section>
+
+<section class="page-break">
+  <h1>Certificate</h1>
+  <p>This is to certify that Mr. Vageesh Hiremath, student of BCA VI Semester, has satisfactorily completed the project work entitled <strong>"Unisex Salon Management System"</strong> for the partial fulfillment of the Bachelor of Computer Applications course prescribed by Karnatak University, Dharwad during the academic year 2025-2026.</p>
+  <p>The project work has been carried out under the guidance of Prof. Umesh Ambiger, Department of Computer Science, JSS Shri Manjunatheshwara Institute of UG &amp; PG Studies, Vidyagiri, Dharwad.</p>
+  <div class="sign-row">
+    <div class="sign">Project Guide<br>Prof. Umesh Ambiger</div>
+    <div class="sign">HOD<br>Department of Computer Science</div>
+    <div class="sign">Principal</div>
+  </div>
+  <p style="margin-top:3em;">Examiners:</p>
+  <p>1. ____________________________</p>
+  <p>2. ____________________________</p>
+</section>
+
+<section class="page-break">
+  <h1>Acknowledgement</h1>
+  <p>The successful completion of this project is the result of continuous guidance, encouragement, and support received from the institution, faculty members, and well-wishers. I express my sincere gratitude to JSS Shri Manjunatheshwara Institute of UG &amp; PG Studies, Vidyagiri, Dharwad for providing the opportunity and facilities required to complete this project work.</p>
+  <p>I am thankful to the Principal and the Head of the Department of Computer Science for their encouragement and academic support throughout the project period. Their motivation helped me understand the practical importance of software development and database management.</p>
+  <p>I express my heartfelt thanks to my project guide Prof. Umesh Ambiger for his valuable guidance, suggestions, and support during the analysis, design, development, and documentation of the project. His direction helped me complete the project in a systematic and professional manner.</p>
+  <p>I also thank my classmates, friends, and family members for their constant encouragement and cooperation. Finally, I thank everyone who directly or indirectly helped me in completing the <strong>Unisex Salon Management System</strong>.</p>
+  <p style="text-align:right; margin-top:2em;"><strong>Vageesh Hiremath</strong></p>
+</section>
+
+<section class="page-break">
+  <h1>Declaration</h1>
+  <p>I, Mr. Vageesh Hiremath, student of Sixth Semester BCA, Department of Computer Science, JSS Shri Manjunatheshwara Institute of UG &amp; PG Studies, Vidyagiri, Dharwad, affiliated to Karnatak University, Dharwad, hereby declare that the project entitled <strong>"Unisex Salon Management System"</strong> submitted in partial fulfillment of the course requirement for the award of the degree Bachelor of Computer Applications is my original work.</p>
+  <p>I further declare that the matter embodied in this project report has not been submitted to any other university or institution for the award of any degree or diploma.</p>
+  <p>Date: ____________________</p>
+  <p>Place: Dharwad</p>
+  <p style="text-align:right; margin-top:2em;">Vageesh Hiremath</p>
+</section>
+
+<section class="page-break">
+  <h1>Contents</h1>
+  <table>
+    <tr><th>S. No.</th><th>Title</th><th>Page No.</th></tr>
+    <tr><td>1</td><td>Project Synopsis: Introduction, Objectives, Input and Output, Process Logic, Tools and Platforms, Limitations and Scope</td><td>1-6</td></tr>
+    <tr><td>2</td><td>Introduction: Languages and Technologies Used in the Project</td><td>7-15</td></tr>
+    <tr><td>3</td><td>System Analysis: Existing System and Proposed System</td><td>16-17</td></tr>
+    <tr><td>4</td><td>System Design: Software Design, Architecture Design, Logical Design, DFD, Context Model, ER Model</td><td>18-28</td></tr>
+    <tr><td>5</td><td>System Development</td><td>29-33</td></tr>
+    <tr><td>6</td><td>System Implementation: Database Tables</td><td>34-39</td></tr>
+    <tr><td>7</td><td>Sample Output / Forms / Screenshots</td><td>40-45</td></tr>
+    <tr><td>8</td><td>Testing: Introduction, Types of Testing, Test Objectives</td><td>46-52</td></tr>
+    <tr><td>9</td><td>Limitations</td><td>53</td></tr>
+    <tr><td>10</td><td>Future Scope and Enhancement</td><td>54</td></tr>
+    <tr><td>11</td><td>Source Code</td><td>55-80</td></tr>
+    <tr><td>12</td><td>Bibliography: References, Online Resources, AI Tools Used</td><td>79-80</td></tr>
+  </table>
+</section>
+
+<h1>1. Project Synopsis</h1>
+<h3>1.1 Title of the Project</h3>
+<p><strong>"Unisex Salon Management System"</strong></p>
+<p>The Unisex Salon Management System is a web-based software application developed to manage and automate the day-to-day activities of a salon. It provides a digital platform for maintaining customer records, scheduling appointments, managing services and staff, generating bills, tracking payments, collecting feedback, and producing management reports.</p>
+
+<h3>1.2 Objectives</h3>
+<p>The main objective of this project is to replace manual salon record keeping with an organized computerized system. The specific objectives are:</p>
+<ul>
+  <li>To maintain customer information in a systematic and secure manner.</li>
+  <li>To schedule and manage appointments efficiently.</li>
+  <li>To maintain salon services, gender-based service categories, duration, and price details.</li>
+  <li>To generate automatic bills after service completion.</li>
+  <li>To manage staff details, availability, and assigned appointments.</li>
+  <li>To reduce manual work, paperwork, duplicate entries, and calculation errors.</li>
+  <li>To provide quick access to salon data through role-based admin, staff, and customer panels.</li>
+  <li>To generate reports and revenue charts for better decision making.</li>
+</ul>
+
+<h3>1.3 Input of the Project</h3>
+<p>The system accepts the following inputs:</p>
+<ul>
+  <li>Customer details: name, email, password, phone, gender, date of birth, address, city, and profile information.</li>
+  <li>Admin and staff details: name, email, role, phone, address, status, specialization, availability, working days, and commission percentage.</li>
+  <li>Service details: service name, description, price, duration, category, gender category, status, and image.</li>
+  <li>Appointment details: customer, service, staff, appointment date, time slot, status, and notes.</li>
+  <li>Billing and payment details: bill number, bill date, service amount, discount, final amount, payment method, payment status, and transaction notes.</li>
+  <li>Feedback details: appointment, customer, staff, service, rating, comments, and feedback date.</li>
+</ul>
+
+<h3>1.4 Output of the Project</h3>
+<p>The system produces the following outputs:</p>
+<ul>
+  <li>Customer information records.</li>
+  <li>Appointment schedule and appointment status details.</li>
+  <li>Service list with category, gender category, duration, and price.</li>
+  <li>Staff schedule and assigned appointment list.</li>
+  <li>Bill receipts and printable customer bills.</li>
+  <li>Payment status reports.</li>
+  <li>Customer feedback reports.</li>
+  <li>Admin dashboard summaries, reports, and revenue charts.</li>
+</ul>
+
+<h3>1.5 Modules</h3>
+<h4>Admin Module</h4>
+<ul>
+  <li>Manage customer, staff, and admin user details.</li>
+  <li>Add, edit, delete, and filter salon services.</li>
+  <li>Manage appointments and appointment statuses.</li>
+  <li>View bills, mark payments, and track pending or paid records.</li>
+  <li>View customer feedback and salon reports.</li>
+  <li>Analyze revenue using charts and reports.</li>
+</ul>
+<h4>Customer Module</h4>
+<ul>
+  <li>Register and log in securely.</li>
+  <li>Browse gender-based salon services.</li>
+  <li>Book appointments using available date and time slots.</li>
+  <li>View appointment history and current appointment status.</li>
+  <li>View and print bills.</li>
+  <li>Submit feedback after service completion.</li>
+</ul>
+<h4>Staff Module</h4>
+<ul>
+  <li>View assigned appointments.</li>
+  <li>View daily schedule.</li>
+  <li>Update appointment progress and completion status.</li>
+  <li>Maintain staff profile information.</li>
+</ul>
+<h4>Billing and Payment Module</h4>
+<ul>
+  <li>Generate bills automatically when appointments are completed.</li>
+  <li>Store bill items and final amount details.</li>
+  <li>Support manual payment tracking by admin.</li>
+  <li>Maintain payment status as pending, completed, failed, or paid.</li>
+</ul>
+
+<h3>1.6 Process Logic</h3>
+<p>The user first registers or logs in to the system based on role. Customers can browse services and book appointments by selecting service, staff, date, and time. The system checks availability through AJAX before confirming the booking request. Staff members view assigned appointments and update appointment progress. When an appointment is completed, the billing process creates a bill, bill item, and pending payment record. The admin can review appointments, manage services, update payments, view feedback, and generate reports.</p>
+<div class="figure-box">Figure 1.1: Process flow diagram should be inserted here. It should show Customer Registration/Login -> Service Selection -> Appointment Booking -> Staff Assignment -> Service Completion -> Bill Generation -> Payment Tracking -> Feedback/Reports.</div>
+
+<h3>1.7 Tools and Platforms</h3>
+<h4>Software Requirements</h4>
+<table>
+  <tr><th>Area</th><th>Technology</th></tr>
+  <tr><td>Front End</td><td>HTML5, CSS3, JavaScript, AJAX</td></tr>
+  <tr><td>Back End</td><td>PHP procedural programming</td></tr>
+  <tr><td>Database</td><td>MySQL / phpMyAdmin</td></tr>
+  <tr><td>Server Environment</td><td>WAMP or XAMPP localhost server</td></tr>
+  <tr><td>Libraries</td><td>Font Awesome, Chart.js, PHPMailer files included for mailing support</td></tr>
+  <tr><td>Operating System</td><td>Windows 11 Pro / Windows 10 or later</td></tr>
+</table>
+<h4>Hardware Requirements</h4>
+<table>
+  <tr><th>Component</th><th>Minimum Requirement</th></tr>
+  <tr><td>Processor</td><td>Intel Core i5 or above</td></tr>
+  <tr><td>RAM</td><td>4 GB or above; 16 GB recommended</td></tr>
+  <tr><td>Storage</td><td>256 GB or above; 512 GB recommended</td></tr>
+</table>
+
+<h3>1.8 Are You Doing This Project for a Client / Organization / Industry?</h3>
+<p>Yes. The system is designed for a salon business or organization that requires computerized management of customers, appointments, services, staff, billing, and reports.</p>
+
+<h3>1.9 Duration of the Project</h3>
+<p>The duration of the project is two months.</p>
+
+<h3>1.10 Members of the Project</h3>
+<p>One member: Vageesh Hiremath.</p>
+
+<h3>1.11 Limitations of the Project</h3>
+<ul>
+  <li>Requires basic computer knowledge for admin, staff, and customers.</li>
+  <li>Requires proper system maintenance and database backup.</li>
+  <li>Data security must be managed carefully through strong passwords and controlled access.</li>
+  <li>Online features require internet connectivity.</li>
+  <li>Online payment gateway and SMS/email notification are not included in the current version.</li>
+</ul>
+
+<h3>1.12 Scope of the Project</h3>
+<p>The Unisex Salon Management System helps salons manage daily operations through a computerized system. It stores customer details, schedules appointments, maintains service and price information, manages employee records, generates bills automatically, records manual payments, and supports feedback and reporting. The system reduces manual work, improves accuracy, saves time, and makes information easy to access. It can be expanded in the future to include online payment, SMS alerts, mobile application support, and advanced analytics.</p>
+
+<h1>2. Introduction</h1>
+<p>In modern service-based businesses, timely scheduling, customer satisfaction, and accurate billing are important for smooth operations. A salon handles several daily tasks such as customer registration, service selection, staff allocation, appointment booking, billing, and feedback collection. When these activities are performed manually, the process becomes slow and may result in missing records, appointment conflicts, duplicate entries, and billing mistakes.</p>
+<p>The Unisex Salon Management System is developed to solve these problems by offering a centralized web application for salon administration. The system allows customers to register, browse services, book appointments, and view bills. Staff members can view assigned work and update appointment status. The admin can manage services, customers, staff, appointments, billing, payments, feedback, and reports from a single dashboard.</p>
+<p>The system is designed for a unisex salon, so it supports service categories for male, female, kids, and unisex services. The project uses PHP and MySQL because they are widely used for small and medium web applications, easy to deploy on localhost servers such as WAMP/XAMPP, and suitable for database-driven applications.</p>
+
+<h3>2.1 Introduction to Technologies Used in This Project</h3>
+<h4>HTML</h4>
+<p>HTML stands for HyperText Markup Language. It is used to structure web pages by defining headings, paragraphs, tables, forms, links, and other page elements. In this project, HTML is used to create the layout of login pages, registration forms, dashboards, appointment forms, service pages, and billing views.</p>
+<pre>&lt;h1&gt;Welcome to Unisex Salon Management System&lt;/h1&gt;
+&lt;form method="post"&gt;
+  &lt;input type="email" name="email" required&gt;
+  &lt;input type="password" name="password" required&gt;
+  &lt;button type="submit"&gt;Login&lt;/button&gt;
+&lt;/form&gt;</pre>
+
+<h4>CSS</h4>
+<p>CSS stands for Cascading Style Sheets. It is used to apply colors, spacing, layout, responsive design, fonts, and visual appearance to HTML pages. In this project, CSS files are used for the landing page, dashboards, forms, tables, buttons, badges, and responsive panels.</p>
+
+<h4>JavaScript and AJAX</h4>
+<p>JavaScript is used to make web pages interactive. AJAX is used to send and receive data from the server without reloading the full page. In this project, AJAX supports customer registration checks, service filtering, available staff loading, time-slot availability checking, appointment booking, search, CAPTCHA refresh, and appointment status updates.</p>
+
+<h4>PHP</h4>
+<p>PHP is a server-side scripting language used to process forms, manage sessions, connect with the database, validate data, and generate dynamic pages. In this project, PHP handles authentication, role-based access, appointment booking, bill generation, payment updates, feedback storage, and report generation.</p>
+
+<h4>MySQL</h4>
+<p>MySQL is a relational database management system used for storing and retrieving structured data. The project database is named <strong>unisex_salon_db</strong>. It stores details of customers, users, staff, services, appointments, bills, bill items, payments, feedback, login attempts, and settings.</p>
+
+<h4>WAMP Server</h4>
+<p>WAMP provides an integrated development environment for Windows, Apache, MySQL, and PHP. It allows the project to run locally through a browser using localhost. It also provides phpMyAdmin for database import and management.</p>
+
+<h1>3. System Analysis</h1>
+<h3>3.1 Existing System</h3>
+<p>In the existing manual salon system, customer details, appointments, service charges, staff schedules, and billing details are maintained in registers or separate files. This method is time-consuming and requires more paperwork. Appointment conflicts can occur when multiple customers request the same time slot. Searching old records is difficult, and bills must be calculated manually. Manual reporting also takes more time and may not provide an accurate picture of daily revenue or pending payments.</p>
+
+<h3>3.2 Proposed System</h3>
+<p>The proposed Unisex Salon Management System provides a computerized solution for managing salon operations. It stores all important records in a MySQL database and provides role-based access for admin, staff, and customers. Customers can book appointments online, staff can manage assigned appointments, and the admin can control services, customers, staff, billing, payments, feedback, and reports. The system improves speed, accuracy, data availability, and service quality.</p>
+<table>
+  <tr><th>Existing System</th><th>Proposed System</th></tr>
+  <tr><td>Manual records and paperwork</td><td>Centralized digital database</td></tr>
+  <tr><td>Manual appointment scheduling</td><td>Automated booking with availability checks</td></tr>
+  <tr><td>Manual bill calculation</td><td>Automatic bill generation after service completion</td></tr>
+  <tr><td>Difficult to prepare reports</td><td>Reports and revenue charts available to admin</td></tr>
+  <tr><td>Higher chance of errors</td><td>Validation, status tracking, and structured records</td></tr>
+</table>
+
+<h1>4. System Design</h1>
+<h3>4.1 Software Design</h3>
+<p>The software is designed as a web-based database application. The front end contains pages and forms for users to interact with the system. The back end contains PHP scripts that validate input, apply business logic, and communicate with the database. The database layer stores all persistent information in relational tables. The application uses session-based authentication and role checks to restrict access to admin, staff, and customer panels.</p>
+
+<h3>4.2 Architecture Design</h3>
+<p>The system follows a three-layer architecture:</p>
+<ul>
+  <li>Presentation Layer: HTML, CSS, JavaScript, dashboards, forms, tables, and views.</li>
+  <li>Application Layer: PHP scripts for authentication, appointment handling, billing, reports, and validations.</li>
+  <li>Database Layer: MySQL database storing all salon management records.</li>
+</ul>
+<div class="figure-box">Figure 4.1: Architecture diagram should be inserted here. It should show Browser/User Interface -> PHP Application Logic -> MySQL Database.</div>
+
+<h3>4.3 Logical Design</h3>
+<p>The logical design is based on three main user roles: admin, customer, and staff. Customers perform registration, service browsing, appointment booking, bill viewing, and feedback submission. Staff members manage assigned appointments and update service status. The admin manages all master data, operational data, billing, payments, feedback, and reports.</p>
+
+<h3>4.4 Design Principles</h3>
+<ul>
+  <li>Role-based access control for security and clarity.</li>
+  <li>Centralized database for consistent records.</li>
+  <li>AJAX-based updates for faster interaction.</li>
+  <li>Simple forms and tables for easy use.</li>
+  <li>Automatic billing to reduce calculation errors.</li>
+  <li>Modular folders for admin, customer, staff, AJAX, assets, includes, and configuration.</li>
+</ul>
+
+<h3>4.5 Data Flow Diagram</h3>
+<p>A Data Flow Diagram represents the flow of information between external entities, processes, and data stores. In this project, the main external entities are Customer, Staff, and Admin. The main processes are registration/login, appointment booking, service management, appointment handling, billing, payment tracking, feedback, and report generation.</p>
+<div class="figure-box">Figure 4.2: Level 0 DFD should be inserted here. It should show Customer/Admin/Staff interacting with the Unisex Salon Management System and the Salon Database.</div>
+<div class="figure-box">Figure 4.3: Level 1 DFD should be inserted here. It should divide the system into Authentication, Service Management, Appointment Management, Billing, Payment, Feedback, and Reporting processes.</div>
+
+<h3>4.6 Context Model</h3>
+<p>The context model shows the complete system as one process. Customers send registration details, appointment requests, and feedback to the system and receive appointment status, service details, and bills. Staff receive appointment assignments and send status updates. Admin sends service, staff, payment, and report requests and receives dashboards, reports, bills, and feedback details.</p>
+<div class="figure-box">Figure 4.4: Context model diagram should be inserted here with Customer, Staff, Admin, and Unisex Salon Management System as the central process.</div>
+
+<h3>4.7 Entity Relationship Model</h3>
+<p>The ER model represents the relationship between database entities. Customers book appointments. Appointments are related to services and may be assigned to staff. Completed appointments generate bills. Bills contain bill items and payments. Customers can submit feedback for appointments, services, and staff.</p>
+<div class="figure-box">Figure 4.5: ER diagram should be inserted here. Main entities: customers, users, staff, services, appointments, bills, bill_items, payments, feedback, login_attempts, settings.</div>
+
+<h1>5. System Development</h1>
+<h3>5.1 System Development Phase</h3>
+<p>The system was developed through requirement analysis, database design, user interface development, backend development, module integration, testing, and documentation. The first step was to identify the main salon operations and convert them into software modules. After that, database tables were created to store customers, staff, services, appointments, bills, payments, and feedback. PHP pages were then developed for each role-based panel.</p>
+
+<h3>Development Approach</h3>
+<p>The project follows a modular development approach. Each major function is implemented in a separate module, such as admin dashboard, customer dashboard, staff dashboard, appointment booking, service management, billing, payment management, and reports. This approach makes the system easier to understand, test, and maintain.</p>
+
+<h3>Tools and Technologies Used</h3>
+<ul>
+  <li>PHP for server-side logic.</li>
+  <li>MySQL for database management.</li>
+  <li>HTML, CSS, and JavaScript for user interface development.</li>
+  <li>AJAX for dynamic booking and filtering operations.</li>
+  <li>WAMP/XAMPP for local server execution.</li>
+  <li>Chart.js for admin revenue chart visualization.</li>
+</ul>
+
+<h3>Development Steps</h3>
+<ol>
+  <li>Created the database <strong>unisex_salon_db</strong> and required relational tables.</li>
+  <li>Developed common database connection and helper functions in <strong>config/db.php</strong>.</li>
+  <li>Created authentication and role-checking logic for admin, staff, and customer users.</li>
+  <li>Designed landing page, login page, registration page, dashboards, forms, and reports.</li>
+  <li>Implemented customer appointment booking and AJAX time-slot checking.</li>
+  <li>Implemented staff appointment status update functionality.</li>
+  <li>Implemented automatic bill generation after completed appointments.</li>
+  <li>Implemented admin reports, revenue charts, feedback view, and payment tracking.</li>
+  <li>Performed testing and debugging for forms, validations, booking flow, and billing flow.</li>
+</ol>
+
+<h3>Outcome</h3>
+<p>The final system provides an organized digital platform where salon operations can be performed more efficiently. Admin can manage the complete system, customers can book appointments and view bills, and staff can manage assigned services. The system reduces manual work and improves the accuracy of appointment and billing records.</p>
+
+<h1>6. System Implementation</h1>
+<h3>6.1 Planning the Implementation</h3>
+<p>Implementation planning includes identifying the required software, importing the database, placing the project folder inside the WAMP/XAMPP web root, configuring database credentials, and testing the login credentials. The implementation also includes assigning roles and verifying each module separately.</p>
+
+<h3>6.2 System Installation and Setup</h3>
+<ol>
+  <li>Install WAMP or XAMPP server.</li>
+  <li>Copy the project folder to the web server directory, such as <strong>C:\wamp64\www\unisex_salon_management</strong>.</li>
+  <li>Start Apache and MySQL services.</li>
+  <li>Open phpMyAdmin and import <strong>database/salon_db.sql</strong>.</li>
+  <li>Open the application using <strong>http://localhost/unisex_salon_management/</strong>.</li>
+  <li>Login using admin, staff, or customer credentials and verify modules.</li>
+</ol>
+
+<h3>6.3 User Training</h3>
+<p>Admin users must be trained to manage services, staff, customers, appointments, bills, payments, feedback, and reports. Staff users must be trained to view assigned appointments and update status. Customers require basic guidance for registration, login, service selection, appointment booking, bill viewing, and feedback submission.</p>
+
+<h3>6.4 Testing</h3>
+<p>After setup, each module is tested using valid and invalid inputs. Registration, login, appointment booking, service management, staff scheduling, billing, payment status, feedback, and reports are tested to ensure that the system behaves correctly.</p>
+
+<h3>6.5 Go-Live Deployment</h3>
+<p>After successful testing, the system can be deployed on a production server or used on a local salon computer. User credentials should be created, default passwords should be changed, and regular backup procedures should be followed.</p>
+
+<h3>6.6 Post-Implementation Support</h3>
+<p>Post-implementation support includes fixing issues, updating services and prices, maintaining backups, reviewing feedback, and improving system features based on user requirements.</p>
+
+<h3>6.7 Tables Used in the Database</h3>
+<table>
+  <tr><th>Table Name</th><th>Purpose</th><th>Important Fields</th></tr>
+  <tr><td>customers</td><td>Stores customer account and profile information.</td><td>id, name, email, password, phone, gender, date_of_birth, address, city, status</td></tr>
+  <tr><td>users</td><td>Stores admin and staff login users.</td><td>id, name, email, password, role, status, phone, address, last_login</td></tr>
+  <tr><td>staff</td><td>Stores staff-specific working information.</td><td>id, user_id, specialization, availability_start, availability_end, days_working, commission_percentage</td></tr>
+  <tr><td>services</td><td>Stores salon service details.</td><td>id, name, description, price, duration, category, gender_category, status, image</td></tr>
+  <tr><td>appointments</td><td>Stores appointment booking and status details.</td><td>id, customer_id, staff_id, service_id, appointment_date, appointment_time, status, notes</td></tr>
+  <tr><td>bills</td><td>Stores generated bill records.</td><td>id, appointment_id, customer_id, bill_number, bill_date, total_amount, discount, final_amount, status</td></tr>
+  <tr><td>bill_items</td><td>Stores services included in each bill.</td><td>id, bill_id, service_id, service_name, quantity, price, total</td></tr>
+  <tr><td>payments</td><td>Stores manual payment tracking details.</td><td>id, bill_id, customer_id, amount, payment_method, payment_date, status, transaction_id</td></tr>
+  <tr><td>feedback</td><td>Stores customer feedback and ratings.</td><td>id, appointment_id, customer_id, staff_id, service_id, rating, comment, feedback_date, status</td></tr>
+  <tr><td>login_attempts</td><td>Stores login attempt records for security.</td><td>id, email, ip_address, success, attempted_at</td></tr>
+  <tr><td>settings</td><td>Stores configurable system settings.</td><td>id, setting_name, setting_value</td></tr>
+</table>
+
+<h1>7. Sample Output / Forms / Screenshots</h1>
+<p>This chapter should include screenshots of the developed system. The following screenshots are recommended:</p>
+<table>
+  <tr><th>Figure No.</th><th>Screenshot / Form</th><th>Description</th></tr>
+  <tr><td>7.1</td><td>Home Page</td><td>Shows the salon landing page with services, gallery, reviews, and contact section.</td></tr>
+  <tr><td>7.2</td><td>Login Page</td><td>Shows role-based login with security validation and CAPTCHA.</td></tr>
+  <tr><td>7.3</td><td>Customer Registration Page</td><td>Shows customer registration form with password strength and validation.</td></tr>
+  <tr><td>7.4</td><td>Admin Dashboard</td><td>Shows summary cards, reports, and administrative navigation.</td></tr>
+  <tr><td>7.5</td><td>Service Management Page</td><td>Shows add/edit/delete/filter operations for salon services.</td></tr>
+  <tr><td>7.6</td><td>Book Appointment Page</td><td>Shows customer appointment booking with service, staff, date, and time slot.</td></tr>
+  <tr><td>7.7</td><td>Staff Assigned Appointments</td><td>Shows staff schedule and status update options.</td></tr>
+  <tr><td>7.8</td><td>Bill View</td><td>Shows generated bill with service amount and final amount.</td></tr>
+  <tr><td>7.9</td><td>Revenue Chart</td><td>Shows Chart.js revenue visualization for admin.</td></tr>
+  <tr><td>7.10</td><td>Feedback Page</td><td>Shows customer feedback submission and admin feedback review.</td></tr>
+</table>
+<div class="figure-box">Insert screenshots after this page using the figure titles listed above.</div>
+
+<h1>8. Testing</h1>
+<h3>8.1 Introduction</h3>
+<p>Testing is performed to ensure that the system meets its requirements and works correctly under different conditions. The Unisex Salon Management System was tested for registration, login, appointment booking, service management, staff assignment, bill generation, payment updates, feedback, and reports.</p>
+
+<h3>Unit Testing</h3>
+<p>Individual pages and functions such as login validation, customer registration, service insertion, appointment booking, and bill generation are tested separately.</p>
+
+<h3>Integration Testing</h3>
+<p>Integration testing verifies whether different modules work together properly. For example, when an appointment is completed, the billing module should create a bill and payment record correctly.</p>
+
+<h3>System Testing</h3>
+<p>System testing verifies the complete application from login to report generation. It checks whether all role-based panels work together as expected.</p>
+
+<h3>Validation Testing</h3>
+<p>Validation testing ensures that required fields, email format, phone number format, password requirements, time-slot availability, and status values are handled correctly.</p>
+
+<h3>Black Box Testing</h3>
+<p>Black box testing checks the system output based on input without examining internal code. Example: entering invalid login details should display an error message.</p>
+
+<h3>White Box Testing</h3>
+<p>White box testing checks internal code paths such as database queries, prepared statements, status update logic, and bill generation conditions.</p>
+
+<h3>Acceptance Testing</h3>
+<p>Acceptance testing verifies whether the system satisfies user requirements for salon management operations.</p>
+
+<h3>8.2 Types of Testing</h3>
+<table>
+  <tr><th>Test Type</th><th>Description</th></tr>
+  <tr><td>Functional Testing</td><td>Checks whether each function performs the required task.</td></tr>
+  <tr><td>Usability Testing</td><td>Checks whether users can understand and use the forms and dashboards easily.</td></tr>
+  <tr><td>Security Testing</td><td>Checks login protection, session handling, password hashing, and role-based access.</td></tr>
+  <tr><td>Database Testing</td><td>Checks whether records are inserted, updated, deleted, and retrieved correctly.</td></tr>
+  <tr><td>Compatibility Testing</td><td>Checks whether the application runs properly on localhost browsers.</td></tr>
+</table>
+
+<h3>8.3 Test Objectives</h3>
+<ul>
+  <li>To ensure all required forms validate user input.</li>
+  <li>To verify that appointments are not booked without required details.</li>
+  <li>To ensure that only authorized users can access their dashboards.</li>
+  <li>To verify automatic bill generation after completed appointments.</li>
+  <li>To ensure reports and charts display correct data.</li>
+</ul>
+<table>
+  <tr><th>Test No.</th><th>Test Case</th><th>Expected Result</th><th>Status</th></tr>
+  <tr><td>1</td><td>Leave email and password blank and press Login.</td><td>System prompts the user to fill required details.</td><td>Pass</td></tr>
+  <tr><td>2</td><td>Enter valid admin credentials.</td><td>Admin dashboard opens successfully.</td><td>Pass</td></tr>
+  <tr><td>3</td><td>Enter invalid username or password.</td><td>Error message is displayed and dashboard is not opened.</td><td>Pass</td></tr>
+  <tr><td>4</td><td>Register customer with missing required fields.</td><td>System displays validation message.</td><td>Pass</td></tr>
+  <tr><td>5</td><td>Book appointment with valid service, date, and time.</td><td>Appointment is stored and shown in customer appointment list.</td><td>Pass</td></tr>
+  <tr><td>6</td><td>Select an unavailable time slot.</td><td>System prevents duplicate or unavailable booking.</td><td>Pass</td></tr>
+  <tr><td>7</td><td>Staff updates appointment to completed.</td><td>Appointment status changes and bill is generated.</td><td>Pass</td></tr>
+  <tr><td>8</td><td>Admin marks a pending payment as paid.</td><td>Payment and bill status are updated.</td><td>Pass</td></tr>
+  <tr><td>9</td><td>Customer submits feedback.</td><td>Feedback is saved and visible to admin.</td><td>Pass</td></tr>
+  <tr><td>10</td><td>Admin opens revenue chart.</td><td>Chart displays revenue data.</td><td>Pass</td></tr>
+</table>
+
+<h1>9. Limitations</h1>
+<ol>
+  <li>The current system is mainly designed for web-based localhost or server use and does not include a native mobile application.</li>
+  <li>Online payment gateway integration is not included; payments are tracked manually by admin.</li>
+  <li>SMS and email notification features are not included in the current working version.</li>
+  <li>The system requires proper database backup and maintenance.</li>
+  <li>Users need basic computer and browser knowledge.</li>
+  <li>Internet is required for online or hosted access.</li>
+  <li>The system depends on correct staff availability and service data entered by admin.</li>
+</ol>
+
+<h1>10. Future Scope and Enhancement</h1>
+<ol>
+  <li>Integration with online payment gateways such as UPI, card payment, and net banking.</li>
+  <li>SMS and email notifications for appointment confirmation, reminders, and bill updates.</li>
+  <li>Mobile application for customers and staff.</li>
+  <li>Online cancellation and rescheduling workflow with salon approval.</li>
+  <li>Loyalty points, membership plans, and discount coupon management.</li>
+  <li>Inventory management for salon products and consumables.</li>
+  <li>Advanced analytics for popular services, customer retention, and staff performance.</li>
+  <li>Multi-branch salon management support.</li>
+  <li>Improved security features such as two-factor authentication and audit logs.</li>
+</ol>
+
+<h1>11. Source Code</h1>
+<p>This chapter contains important representative source code from the project. The full project includes separate folders for admin, customer, staff, AJAX handlers, shared includes, configuration, assets, and database files.</p>
+
+<h3>11.1 Database Connection</h3>
+<pre>&lt;?php
+define('DB_HOST', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+define('DB_NAME', 'unisex_salon_db');
+
+$conn = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+if ($conn-&gt;connect_error) {
+    die("Connection failed: " . $conn-&gt;connect_error);
+}
+
+$conn-&gt;set_charset("utf8");
+?&gt;</pre>
+
+<h3>11.2 Prepared Query Helper</h3>
+<pre>function preparedQuery($query, $types = '', $params = []) {
+    global $conn;
+    $stmt = $conn-&gt;prepare($query);
+    if (!$stmt) {
+        throw new Exception('Database prepare failed: ' . $conn-&gt;error);
+    }
+    if ($types && $params) {
+        $stmt-&gt;bind_param($types, ...$params);
+    }
+    if (!$stmt-&gt;execute()) {
+        throw new Exception('Database execute failed: ' . $stmt-&gt;error);
+    }
+    return $stmt;
+}</pre>
+
+<h3>11.3 Appointment Table SQL</h3>
+<pre>CREATE TABLE appointments (
+  id int NOT NULL AUTO_INCREMENT,
+  customer_id int NOT NULL,
+  staff_id int DEFAULT NULL,
+  service_id int NOT NULL,
+  appointment_date date NOT NULL,
+  appointment_time time NOT NULL,
+  status enum('pending','approved','rejected','confirmed','in-progress','completed','cancelled') DEFAULT 'pending',
+  notes text,
+  created_at timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  updated_at timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+);</pre>
+
+<h3>11.4 Services Table SQL</h3>
+<pre>CREATE TABLE services (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(100) NOT NULL,
+  description text,
+  price decimal(10,2) NOT NULL,
+  duration int NOT NULL,
+  category varchar(50) DEFAULT NULL,
+  gender_category enum('Male','Female','Kids','Unisex') NOT NULL DEFAULT 'Unisex',
+  status enum('active','inactive') DEFAULT 'active',
+  image varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id)
+);</pre>
+
+<h3>11.5 Automatic Bill Generation Logic</h3>
+<pre>// When appointment status becomes completed, the system creates
+// a bill, bill item, and pending payment record for the customer.
+$billNumber = 'BILL-' . date('Y') . '-' . str_pad($nextNumber, 4, '0', STR_PAD_LEFT);
+$billDate = date('Y-m-d');
+$totalAmount = $service['price'];
+$finalAmount = $totalAmount;
+
+preparedQuery(
+  "INSERT INTO bills (appointment_id, customer_id, bill_number, bill_date, total_amount, final_amount, status, notes)
+   VALUES (?, ?, ?, ?, ?, ?, 'pending', 'Auto-generated after completed appointment')",
+  "iissdd",
+  [$appointmentId, $customerId, $billNumber, $billDate, $totalAmount, $finalAmount]
+);</pre>
+
+<h3>11.6 AJAX-Based Appointment Availability</h3>
+<pre>// The booking page sends selected service, staff, date, and time
+// to an AJAX handler. The handler checks existing appointments
+// before allowing the customer to book the selected slot.
+SELECT id
+FROM appointments
+WHERE staff_id = ?
+  AND appointment_date = ?
+  AND appointment_time = ?
+  AND status NOT IN ('cancelled', 'rejected');</pre>
+
+<h3>11.7 Folder Structure</h3>
+<pre>unisex_salon_management/
+|-- index.php
+|-- login.php
+|-- register.php
+|-- logout.php
+|-- profile.php
+|-- config/db.php
+|-- includes/auth.php
+|-- includes/generate_bill.php
+|-- admin/
+|-- customer/
+|-- staff/
+|-- ajax/
+|-- assets/css/
+|-- assets/js/
+|-- database/salon_db.sql</pre>
+
+<h1>12. Bibliography</h1>
+<h3>12.1 References</h3>
+<ol>
+  <li>Silberschatz, Korth, and Sudarshan, <em>Database System Concepts</em>.</li>
+  <li>Roger S. Pressman, <em>Software Engineering: A Practitioner's Approach</em>.</li>
+  <li>Welling and Thomson, <em>PHP and MySQL Web Development</em>.</li>
+</ol>
+
+<h3>12.2 Websites</h3>
+<ol>
+  <li>PHP Official Documentation: https://www.php.net/docs.php</li>
+  <li>MySQL Official Documentation: https://dev.mysql.com/doc/</li>
+  <li>MDN Web Docs for HTML, CSS, and JavaScript: https://developer.mozilla.org/</li>
+  <li>Chart.js Documentation: https://www.chartjs.org/docs/</li>
+  <li>WAMP Server: https://www.wampserver.com/</li>
+</ol>
+
+<h3>12.3 AI Tools Used</h3>
+<p>AI assistance was used for improving documentation structure, academic wording, and report formatting. The project logic, source code, database schema, and screenshots should be verified by the student before final submission.</p>
+
+</body>
+</html>
