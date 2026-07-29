@@ -18,6 +18,32 @@ A PHP procedural salon management project for WAMP/XAMPP localhost. It includes 
 - Customer bill view and print/download through browser print.
 - Admin reports and Chart.js revenue charts.
 
+## Screenshots
+
+### Landing Page
+![Landing Page](screenshots/01-Landing-page.png)
+
+### Login
+![Login Page](screenshots/02-login.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/03-Admin-dashboard.png)
+
+### Service Management
+![Service Management](screenshots/04-Service-management.png)
+
+### Appointment Booking
+![Appointment Booking](screenshots/05-Appointment-Booking.png)
+
+### Staff Dashboard
+![Staff Dashboard](screenshots/06-Staff-Dashboard.png)
+
+### Billing and Payment
+![Billing and Payment](screenshots/07-Billing-Payment.png)
+
+### Reports and Analytics
+![Reports and Analytics](screenshots/08-reports.png)
+
 ## Technologies
 
 - PHP procedural
